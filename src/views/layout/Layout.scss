@@ -1,0 +1,9 @@
+@import "../../App.scss";
+
+.container {
+  flex: auto;
+  width: 100%;
+  background-color: green;
+  min-height: calc(100vh - $footer-height - $header-height);
+  margin-top: $header-height;
+}
