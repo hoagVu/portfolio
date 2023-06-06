@@ -1,10 +1,24 @@
-import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-
-// https://vitejs.dev/config/
+import path from "path";
+import { defineConfig } from "vite";
+import eslint from "vite-plugin-eslint";
+import tsconfigPaths from "vite-tsconfig-paths";
+console.log(import.meta.url);
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), eslint(), tsconfigPaths()],
   server: {
-    port: 8000,
-  }
-})
+    host: "0.0.0.0",
+    port: 4000,
+    open: true,
+    cors: true,
+  },
+  build: {
+    outDir: "dist",
+  },
+  css: {
+    devSourcemap: true,
+  },
+  resolve: {
+    alias: { "@/": `${path.resolve(__dirname, "src")}/` },
+  },
+});
