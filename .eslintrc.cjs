@@ -48,6 +48,7 @@ module.exports = {
     "@typescript-eslint/no-unused-vars": 0,
     "no-empty-interface": 0,
     "@typescript-eslint/no-empty-interface": 0,
+    "@typescript-eslint/no-explicit-any": 0,
     "no-constant-condition": 0, //if(true, flase) .... - recommened
     "no-await-in-loop": 0, // không tận dụng được lợi thế của async/await(vd await từng phần tử trong vòng for)
     "no-return-await": 0, // lỗi khi sử dụng return await
