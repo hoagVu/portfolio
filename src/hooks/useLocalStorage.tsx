@@ -1,3 +1,4 @@
+import { parseJSON } from "@/utils/helper";
 import {
   Dispatch,
   SetStateAction,
@@ -7,15 +8,6 @@ import {
 } from "react";
 
 type SetValue<T> = Dispatch<SetStateAction<T>>;
-
-const parseJSON = <T,>(value: string | null): T | undefined => {
-  try {
-    return value === "undefined" ? undefined : JSON.parse(value ?? "");
-  } catch {
-    console.log("parsing error on", { value });
-    return undefined;
-  }
-};
 
 const useLocalStorage = <T,>(
   key: string,

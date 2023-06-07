@@ -1,22 +1,18 @@
 import useDarkMode from "@/hooks/useDarkMode";
-import "./App.scss";
+import Footer from "@/views/footer/Footer";
 import Header from "@/views/header/Header";
+import Layout from "@/views/layout/Layout";
+import "./App.scss";
 
 interface IAppProps {}
 
 const App: React.FunctionComponent<IAppProps> = (props) => {
-  const { currentTheme, toggleDarkMode } = useDarkMode();
-  console.log("currentTheme", currentTheme);
+  const { currentTheme } = useDarkMode();
   return (
     <div className="app" data-theme={currentTheme}>
       <Header />
-      <div style={{ marginTop: 100 }}>
-        <span>Easy Darkmode and Themes in React</span>
-        <button onClick={toggleDarkMode}>
-          Switch {currentTheme} to {currentTheme === "light" ? "Dark" : "Light"}{" "}
-          Theme
-        </button>
-      </div>
+      <Layout />
+      <Footer />
     </div>
   );
 };
