@@ -3,7 +3,7 @@
 .container {
   flex: auto;
   width: 100%;
-  background-color: green;
+  background-color: var(--background);
   min-height: calc(100vh - $footer-height - $header-height);
   margin-top: $header-height;
 }

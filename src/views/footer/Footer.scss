@@ -1,7 +1,7 @@
 @import "../../App.scss";
 
 footer {
-  background-color: green;
+  background-color: var(--background);
   width: 100%;
   height: $footer-height;
 }
