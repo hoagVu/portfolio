@@ -1,0 +1,86 @@
+.btn-switch-theme {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+}
+
+#checkbox {
+  display: none;
+}
+
+.switch {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  z-index: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #242424;
+  box-shadow: 0px 0px 2px rgb(2, 2, 2) inset;
+}
+
+.powersign {
+  position: relative;
+  width: 30%;
+  height: 30%;
+  border: 2px solid #242424;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.powersign::before {
+  content: "";
+  content: "";
+  width: 4px;
+  height: 100%;
+  background-color: white;
+  position: absolute;
+  top: -60%;
+  z-index: 2;
+}
+
+.powersign::after {
+  content: "";
+  width: 2px;
+  height: 80%;
+  background-color: #242424;
+  position: absolute;
+  top: -40%;
+  z-index: 3;
+}
+
+#checkbox[data-theme="dark"] + .switch .powersign {
+  border: 2px solid rgb(255, 255, 255);
+  box-shadow: 0px 0px 8px rgb(151, 243, 255),
+    0px 0px 2px rgb(151, 243, 255) inset;
+}
+
+#checkbox[data-theme="dark"] + .switch .powersign::after {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 5px rgb(151, 243, 255);
+}
+
+#checkbox[data-theme="dark"] + .switch {
+  box-shadow: 0px 0px 1px rgb(151, 243, 255) inset,
+    0px 0px 2px rgb(151, 243, 255) inset, 0px 0px 10px rgb(151, 243, 255) inset,
+    0px 0px 40px rgb(151, 243, 255), 0px 0px 100px rgb(151, 243, 255),
+    0px 0px 5px rgb(151, 243, 255);
+  border: 2px solid rgb(255, 255, 255);
+  background-color: rgb(146, 180, 184);
+}
+
+#checkbox[data-theme="dark"] + .switch .powersign::before {
+  background-color: rgb(146, 180, 184);
+}
+
+@media only screen and (min-width: 375px) and (max-width: 1024px) {
+  .switch {
+    width: 30px;
+    height: 30px;
+  }
+}
