@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 import * as React from "react";
 import "./CatAnimation.scss";
 
@@ -5,7 +7,7 @@ interface ICatAnimationProps {}
 
 const CatAnimation: React.FunctionComponent<ICatAnimationProps> = (props) => {
   return (
-    <div className="cat">
+    <div className="cat" onClick={() => window.scrollTo(0, 0)}>
       <div className="ear ear--left"></div>
       <div className="ear ear--right"></div>
       <div className="face">
