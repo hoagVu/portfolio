@@ -38,7 +38,7 @@ const useDarkMode = () => {
   }, [defaultDark, theme]);
 
   return {
-    isDarkMode: theme !== THEME_MODE.Light,
+    isDarkMode: currentTheme !== THEME_MODE.Light,
     currentTheme,
     toggleDarkMode,
   };

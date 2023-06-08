@@ -1,7 +1,7 @@
-@import "../../App.scss";
-
 footer {
   background-color: var(--background);
+  height: var(--footer-height);
+  padding: var(--app-padding);
   width: 100%;
-  height: $footer-height;
+  box-sizing: border-box;
 }

@@ -1,19 +1,33 @@
-import useDarkMode from "@/hooks/useDarkMode";
 import * as React from "react";
 import "./Header.scss";
+import CatAnimation from "@/components/catAnimation/CatAnimation";
+import useDarkMode from "@/hooks/useDarkMode";
 interface IHeaderProps {}
 
 const Header: React.FunctionComponent<IHeaderProps> = (props) => {
-  const { currentTheme, toggleDarkMode } = useDarkMode();
+  const { isDarkMode } = useDarkMode();
 
   return (
-    <header>
-      Header
-      <button onClick={toggleDarkMode}>
-        Switch {currentTheme} to {currentTheme === "light" ? "Dark" : "Light"}{" "}
-        Theme
-      </button>
-    </header>
+    <div className="header">
+      {isDarkMode ? (
+        <CatAnimation />
+      ) : (
+        <button onClick={() => window.scrollTo(0, 0)}>
+          <img src="/src/assets/images/image.png" alt="" width={80} />
+        </button>
+      )}
+      <div className="nav-link">
+        <button
+          onClick={() => {
+            window.open(
+              "https://www.linkedin.com/in/hoang-vu-viet-93608114b/",
+              "_blank"
+            );
+          }}>
+          myLinkedin
+        </button>
+      </div>
+    </div>
   );
 };
 

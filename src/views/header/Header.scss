@@ -1,10 +1,21 @@
-@import "../../App.scss";
-
-header {
-  position: fixed;
+.header {
   background-color: var(--background);
   top: 0;
   left: 0;
+  height: var(--header-height);
+  padding: var(--app-padding);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
   width: 100%;
-  height: $header-height;
+  box-sizing: border-box;
+  border-bottom: 1px solid grey;
+  z-index: 50;
 }
+
+.nav-link {
+  display: flex;
+  gap: 1em;
+}
+
