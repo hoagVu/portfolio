@@ -1,4 +1,3 @@
-import SeeWorks from "@/features/info/seeWorks/SeeWorks";
 import WorkExperience from "@/features/info/workExperience/WorkExperience";
 import * as React from "react";
 import "./Info.scss";
@@ -8,7 +7,6 @@ const Info: React.FunctionComponent<IInfoProps> = (props) => {
   return (
     <div className="wrapper">
       <WorkExperience />
-      <SeeWorks />
     </div>
   );
 };

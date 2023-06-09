@@ -4,6 +4,7 @@ import "./Layout.scss";
 import Description from "@/features/description/Description";
 import ButtonSwitchTheme from "@/components/buttonSwitchTheme/ButtonSwitchTheme";
 import Info from "@/features/info/Info";
+import SeeWorks from "@/features/info/seeWorks/SeeWorks";
 
 interface ILayoutProps {}
 
@@ -13,6 +14,7 @@ const Layout: React.FunctionComponent<ILayoutProps> = (props) => {
       <Description />
       <ButtonSwitchTheme />
       <Info />
+      <SeeWorks />
     </div>
   );
 };
