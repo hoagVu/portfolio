@@ -11,6 +11,12 @@
   gap: 2em;
 }
 
+.sticky-container {
+  position: sticky;
+  top: 100px;
+  margin-bottom: 2em;
+}
+
 .card {
   top: 120px;
   position: sticky;
@@ -67,6 +73,11 @@
   .see-works-container {
     position: unset;
     gap: 1em;
+  }
+
+  .sticky-container {
+    position: unset;
+    top: 100px;
   }
 
   .card {

@@ -9,9 +9,9 @@ const SeeWorks: React.FunctionComponent<ISeeWorksProps> = (props) => {
       {infoList.map((elm, idx) => {
         if (idx === 0) {
           return (
-            <div style={{ position: "sticky", top: 100 }} key={elm.id}>
+            <div className="sticky-container" key={elm.id}>
               <div className="see-works-title">See Works</div>
-              <div className="card" style={{ top: 0 }}>
+              <div className="card" style={{ top: 0, marginBottom: 0 }}>
                 <div className="card-content">
                   <span className="work-title">{elm.title}</span>
                   <span className="work-content">
@@ -29,7 +29,13 @@ const SeeWorks: React.FunctionComponent<ISeeWorksProps> = (props) => {
           );
         }
         return (
-          <div className="card" style={{ top: idx * 20 + 175 }} key={elm.id}>
+          <div
+            className="card"
+            style={{
+              top: idx * 20 + 175,
+              marginBottom: idx === infoList.length - 1 ? 0 : "2em",
+            }}
+            key={elm.id}>
             <div className="card-content">
               <span className="work-title">{elm.title}</span>
               <span className="work-content">
