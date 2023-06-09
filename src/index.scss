@@ -37,7 +37,7 @@ code {
 }
 
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 10px;
   height: 12px;
   border-radius: 4px;
 }
@@ -68,6 +68,7 @@ code {
   --footer-height: 80px;
 
   --app-padding: 0px 8vw;
+  --component-padding-top: 2em;
 
   --textNormal: #6e7885;
   --textLight: #b7b7b7;
@@ -85,4 +86,18 @@ code {
   --break-2: 1024px;
   --break-3: 800px;
   --break-4: 600px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1490px) {
+  .app {
+    --app-padding: 0px 6vw;
+
+  }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 768px) {
+  .app {
+    --app-padding: 0px 6vw;
+
+  }
 }

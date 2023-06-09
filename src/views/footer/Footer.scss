@@ -4,4 +4,15 @@ footer {
   padding: var(--app-padding);
   width: 100%;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 1em;
+  padding-top: 1em;
+  font-size: var(--font-size-5);
+}
+
+.quote {
+  font-style: italic;
 }

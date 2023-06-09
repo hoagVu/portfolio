@@ -1,0 +1,91 @@
+.work-experience-container {
+    width: 100%;
+
+    .title {
+        font-size: var(--font-size-1);
+        font-weight: bold;
+        margin-bottom: 0.5em;
+        margin-top: var(--component-padding-top);
+    }
+}
+
+.work-experience-card {
+    width: 100%;
+    border-top: 0.5px solid grey;
+    padding: 1em 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-size: var(--font-size-2);
+
+    .card-label {
+        display: flex;
+        flex-direction: column;
+
+        .card-title {
+            font-size: var(--font-size-3);
+        }
+
+        .card-sub-title {
+            font-size: var(--font-size-3);
+            font-style: italic;
+            color: var(--textNormal);
+        }
+    }
+
+    .card-time-label {
+        text-align: right;
+    }
+
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1490px) {
+
+    .work-experience-container {
+        .title {
+            font-size: var(--font-size-2);
+        }
+    }
+
+    .work-experience-card {
+        font-size: var(--font-size-3);
+
+        .card-label {
+            .card-title {
+                font-size: var(--font-size-4);
+            }
+
+            .card-sub-title {
+                font-size: var(--font-size-4);
+            }
+        }
+
+    }
+
+}
+
+@media only screen and (min-width: 375px) and (max-width: 768px) {
+    .work-experience-container {
+        .title {
+            font-size: var(--font-size-3);
+            margin-top: 1.5em;
+        }
+
+    }
+
+    .work-experience-card {
+        font-size: var(--font-size-4);
+
+        .card-label {
+            .card-title {
+                font-size: var(--font-size-5);
+            }
+
+            .card-sub-title {
+                font-size: var(--font-size-6);
+            }
+        }
+    }
+
+}

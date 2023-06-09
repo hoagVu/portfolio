@@ -21,17 +21,15 @@ const Description: React.FunctionComponent<IDescriptionProps> = (props) => {
             }}
           />
         </span>
-        <span>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
+        <span className="label">
+          As a seasoned web developer with expertise in JavaScript technologies.
+          I have a strong passion for building high-performing, scalable, and
+          visually appealing web applications.
         </span>
         <span>
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est
-          laborum.
+          I am dedicated to staying up-to-date with the latest industry
+          developments and continually improving my skills to deliver the best
+          possible solutions to my clients.
         </span>
       </span>
       <div className="avatar">

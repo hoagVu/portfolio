@@ -1,0 +1,118 @@
+.see-works-title {
+    font-size: var(--font-size-1);
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    margin: var(--component-padding-top) 0 0em;
+    position: sticky;
+    top: 100px;
+
+}
+
+.see-works-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.card {
+    top: 150px;
+    position: sticky;
+    border: 0.5px solid #ccc;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+    background-color: var(--background);
+    color: var(--text-primary);
+    padding: 4em 0 0 3em;
+    border-radius: 10px;
+    max-height: 600px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+
+    h2 {
+        padding: 0;
+    }
+
+    .work-title {
+        font-size: var(--font-size-2);
+        font-weight: bold;
+    }
+
+    .card-content {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        max-width: 40%;
+    }
+
+    .project-img {
+        margin-top: 2.5em;
+        flex: auto;
+        max-width: 50%;
+        border-radius: 10px 0px 10px 0px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px 0px 10px 0px;
+            max-height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1490px) {
+
+    .see-works-title {
+        font-size: var(--font-size-2);
+    }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 768px) {
+
+    .see-works-container {
+        position: unset;
+        gap: 1em;
+    }
+
+    .card {
+        flex-direction: column;
+        padding: 1.5em 1em 1em;
+        max-height: unset;
+        position: unset;
+
+        .card-content {
+            max-width: unset;
+
+            .work-title {
+                font-size: var(--font-size-4);
+            }
+
+            .work-content {
+                font-size: var(--font-size-5);
+            }
+        }
+
+        .project-img {
+            margin-top: 1em;
+            flex: auto;
+            width: 100%;
+            max-width: unset;
+
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 12px;
+                max-height: 400px;
+                object-fit: cover;
+            }
+        }
+    }
+
+
+
+    .see-works-title {
+        font-size: var(--font-size-3);
+        margin-top: 1.5em;
+        position: unset;
+    }
+}
