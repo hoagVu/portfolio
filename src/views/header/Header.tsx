@@ -3,6 +3,8 @@ import "./Header.scss";
 import CatAnimation from "@/components/catAnimation/CatAnimation";
 import useDarkMode from "@/hooks/useDarkMode";
 import ExamplePdf from "@/assets/files/cv.pdf";
+import logoIcon from "/src/assets/images/image.png";
+
 interface IHeaderProps {}
 
 const Header: React.FunctionComponent<IHeaderProps> = () => {
@@ -25,7 +27,7 @@ const Header: React.FunctionComponent<IHeaderProps> = () => {
         <CatAnimation />
       ) : (
         <button onClick={() => window.scrollTo(0, 0)}>
-          <img src="/src/assets/images/image.png" alt="" width={80} />
+          <img src={logoIcon} alt="" width={80} />
         </button>
       )}
 
