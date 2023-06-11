@@ -30,7 +30,7 @@
   display: flex;
   justify-content: space-between;
   overflow: hidden;
-
+  margin-bottom: 2em;
   h2 {
     padding: 0;
   }
@@ -112,6 +112,10 @@
         object-fit: cover;
       }
     }
+  }
+
+  .card-display {
+    margin-bottom: 0em !important;
   }
 
   .see-works-title {

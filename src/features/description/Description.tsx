@@ -33,7 +33,8 @@ const Description: React.FunctionComponent<IDescriptionProps> = (props) => {
         </span>
       </span>
       <div className="avatar">
-        <img src="/src/assets/images/avatar.png" alt="" />
+        <img src="/src/assets/images/avatar.jpeg" alt="" />
+        <div className="avatar-linear"></div>
       </div>
     </div>
   );

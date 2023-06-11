@@ -1,6 +1,7 @@
 import { infoList } from "@/features/info/utils";
 import * as React from "react";
 import "./SeeWorks.scss";
+import clsx from "clsx";
 interface ISeeWorksProps {}
 
 const SeeWorks: React.FunctionComponent<ISeeWorksProps> = (props) => {
@@ -30,11 +31,11 @@ const SeeWorks: React.FunctionComponent<ISeeWorksProps> = (props) => {
         }
         return (
           <div
-            className="card"
-            style={{
-              top: idx * 20 + 175,
-              marginBottom: idx === infoList.length - 1 ? 0 : "2em",
-            }}
+            className={clsx(
+              "card",
+              idx === infoList.length - 1 && "card-display"
+            )}
+            style={{ top: idx * 20 + 175 }}
             key={elm.id}>
             <div className="card-content">
               <span className="work-title">{elm.title}</span>
