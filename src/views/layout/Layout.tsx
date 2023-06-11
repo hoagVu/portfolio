@@ -8,7 +8,7 @@ import SeeWorks from "@/features/info/seeWorks/SeeWorks";
 
 interface ILayoutProps {}
 
-const Layout: React.FunctionComponent<ILayoutProps> = (props) => {
+const Layout: React.FunctionComponent<ILayoutProps> = () => {
   return (
     <div className="container">
       <Description />

@@ -2,9 +2,11 @@ import { infoList } from "@/features/info/utils";
 import * as React from "react";
 import "./SeeWorks.scss";
 import clsx from "clsx";
+import avatarImg from "/src/assets/images/avatar.jpeg";
+
 interface ISeeWorksProps {}
 
-const SeeWorks: React.FunctionComponent<ISeeWorksProps> = (props) => {
+const SeeWorks: React.FunctionComponent<ISeeWorksProps> = () => {
   return (
     <>
       {infoList.map((elm, idx) => {
@@ -47,7 +49,7 @@ const SeeWorks: React.FunctionComponent<ISeeWorksProps> = (props) => {
               </span>
             </div>
             <div className="project-img">
-              <img src="/src/assets/images/avatar.png" alt="" />
+              <img src={avatarImg} alt="" />
             </div>
           </div>
         );

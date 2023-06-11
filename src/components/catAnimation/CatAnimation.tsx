@@ -5,7 +5,7 @@ import "./CatAnimation.scss";
 
 interface ICatAnimationProps {}
 
-const CatAnimation: React.FunctionComponent<ICatAnimationProps> = (props) => {
+const CatAnimation: React.FunctionComponent<ICatAnimationProps> = () => {
   return (
     <div className="cat" onClick={() => window.scrollTo(0, 0)}>
       <div className="ear ear--left"></div>

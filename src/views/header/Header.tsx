@@ -5,7 +5,7 @@ import useDarkMode from "@/hooks/useDarkMode";
 import ExamplePdf from "@/assets/files/cv.pdf";
 interface IHeaderProps {}
 
-const Header: React.FunctionComponent<IHeaderProps> = (props) => {
+const Header: React.FunctionComponent<IHeaderProps> = () => {
   const { isDarkMode } = useDarkMode();
 
   const handleDownloadCV = () => {
@@ -37,8 +37,7 @@ const Header: React.FunctionComponent<IHeaderProps> = (props) => {
               "https://www.linkedin.com/in/hoang-vu-viet-93608114b/",
               "_blank"
             );
-          }}
-        >
+          }}>
           myLinkedin
         </button>
       </div>

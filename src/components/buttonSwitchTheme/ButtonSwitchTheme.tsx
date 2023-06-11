@@ -4,9 +4,9 @@ import "./ButtonSwitchTheme.scss";
 
 interface IButtonSwitchThemeProps {}
 
-const ButtonSwitchTheme: React.FunctionComponent<IButtonSwitchThemeProps> = (
-  props
-) => {
+const ButtonSwitchTheme: React.FunctionComponent<
+  IButtonSwitchThemeProps
+> = () => {
   const { toggleDarkMode, currentTheme } = useDarkMode();
 
   return (

@@ -5,7 +5,7 @@ import Typewriter from "typewriter-effect";
 
 interface IFooterProps {}
 
-const Footer: React.FunctionComponent<IFooterProps> = (props) => {
+const Footer: React.FunctionComponent<IFooterProps> = () => {
   return (
     <footer>
       <div>© Viet Hoang Vu {new Date().getFullYear()}</div>

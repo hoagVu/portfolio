@@ -1,10 +1,10 @@
 import * as React from "react";
 import "./Description.scss";
 import Typewriter from "typewriter-effect";
-
+import avatarImg from "/src/assets/images/avatar.jpeg";
 interface IDescriptionProps {}
 
-const Description: React.FunctionComponent<IDescriptionProps> = (props) => {
+const Description: React.FunctionComponent<IDescriptionProps> = () => {
   return (
     <div className="description">
       <span className="sub-title">
@@ -33,7 +33,7 @@ const Description: React.FunctionComponent<IDescriptionProps> = (props) => {
         </span>
       </span>
       <div className="avatar">
-        <img src="/src/assets/images/avatar.jpeg" alt="" />
+        <img src={avatarImg} alt="" />
         <div className="avatar-linear"></div>
       </div>
     </div>

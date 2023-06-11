@@ -8,9 +8,7 @@ import {
 
 interface IWorkExperienceProps {}
 
-const WorkExperience: React.FunctionComponent<IWorkExperienceProps> = (
-  props
-) => {
+const WorkExperience: React.FunctionComponent<IWorkExperienceProps> = () => {
   return (
     <div className="work-experience-container">
       <div className="title">Education</div>

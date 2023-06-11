@@ -6,7 +6,7 @@ import "./App.scss";
 
 interface IAppProps {}
 
-const App: React.FunctionComponent<IAppProps> = (props) => {
+const App: React.FunctionComponent<IAppProps> = () => {
   const { currentTheme } = useDarkMode();
   return (
     <div className="app" data-theme={currentTheme}>
