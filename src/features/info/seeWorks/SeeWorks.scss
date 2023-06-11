@@ -24,7 +24,7 @@
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
   background-color: var(--background);
   color: var(--text-primary);
-  padding: 4em 0 0 3em;
+  padding: 2em 0 0 2em;
   border-radius: 10px;
   max-height: 600px;
   display: flex;
@@ -82,7 +82,7 @@
 
   .card {
     flex-direction: column;
-    padding: 1.5em 1em 1em;
+    padding: 1em 1em 1em;
     max-height: unset;
     position: unset;
 
