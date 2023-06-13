@@ -69,7 +69,8 @@ const SeeWorks: React.FunctionComponent<ISeeWorksProps> = () => {
                 </button>
               )}
             </div>
-            <div className={"project-img"}>
+            <div
+              className={clsx("project-img", elm.link && "project-img-link")}>
               <img
                 src={elm.img}
                 alt=""

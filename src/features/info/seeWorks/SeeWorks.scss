@@ -95,7 +95,7 @@
     }
 
     .img-object-fit {
-      object-fit: unset;
+      object-fit: contain;
     }
 
     img {
@@ -107,6 +107,10 @@
       opacity: 0.8;
       min-height: 550px;
     }
+  }
+
+  .project-img-link {
+    max-height: 100% !important;
   }
 }
 
@@ -160,13 +164,21 @@
       flex: auto;
       width: 100%;
       max-width: unset;
+      max-height: 300px;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+
+      .project-img-link {
+        max-height: 100% !important;
+      }
 
       img {
         width: 100%;
         height: 100%;
         border-radius: 12px;
         max-height: 400px;
-        object-fit: cover;
+        // object-fit: cover;
       }
     }
   }

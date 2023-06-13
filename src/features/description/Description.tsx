@@ -22,14 +22,18 @@ const Description: React.FunctionComponent<IDescriptionProps> = () => {
           />
         </span>
         <span className="label">
-          As a seasoned web developer with expertise in JavaScript technologies.
-          I have a strong passion for building high-performing, scalable, and
-          visually appealing web applications.
+          In addition to my technical skills, I value the importance of
+          creativity and attention to detail in my work as a web developer. I
+          strive to bring a unique and visually appealing touch to every project
+          I undertake, ensuring that the websites I create leave a lasting
+          impression on users.
         </span>
         <span>
-          I am dedicated to staying up-to-date with the latest industry
-          developments and continually improving my skills to deliver the best
-          possible solutions to my clients.
+          I am experienced in implementing responsive design principles,
+          ensuring that websites function seamlessly across various devices and
+          screen sizes. With a focus on clean and efficient code, I prioritize
+          performance optimization to deliver fast-loading and smooth user
+          experiences.
         </span>
       </span>
       <div className="avatar">

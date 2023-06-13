@@ -1,4 +1,4 @@
-import comingsoonImg from "/src/assets/images/comingsoon.jpg";
+import comingsoonImg from "/src/assets/images/coming-soon.jpg";
 import mytourImg from "/src/assets/images/mytour.png";
 
 export const infoList = [

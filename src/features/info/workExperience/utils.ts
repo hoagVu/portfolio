@@ -43,9 +43,18 @@ export const technilcaList = [
   },
   {
     id: 4,
+    skill: "UX Research & UI Design.",
+  },
+  {
+    id: 5,
     skill: "Experienced in debugging, fixing issues and developing software.",
-  }, {
+  },
+  {
     id: 6,
     skill: "Experienced implement responsive web app support for all devices, web accessibility.",
   },
+  {
+    id: 7,
+    skill: "Skilled in leading teams, overseeing tasks and resolving issues, collaborating with cross-functional teams including QA, PM, and UI/UX, and adept at negotiating to align with customer requirements and define project concepts."
+  }
 ];
