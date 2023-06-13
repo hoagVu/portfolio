@@ -1,8 +1,7 @@
 import { infoList } from "@/features/info/utils";
+import clsx from "clsx";
 import * as React from "react";
 import "./SeeWorks.scss";
-import clsx from "clsx";
-import avatarImg from "/src/assets/images/avatar.png";
 
 interface ISeeWorksProps {}
 
@@ -17,15 +16,28 @@ const SeeWorks: React.FunctionComponent<ISeeWorksProps> = () => {
               <div className="card" style={{ top: 0, marginBottom: 0 }}>
                 <div className="card-content">
                   <span className="work-title">{elm.title}</span>
-                  <span className="work-content">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Harum, perspiciatis blanditiis accusamus commodi consectetur
-                    id tempora rem iure eligendi quos eos et autem ratione
-                    exercitationem earum laborum ad a sequi!
-                  </span>
+                  <span className="work-role-content">{elm.role}</span>
+                  <span className="work-content">{elm.workDesctiprion}</span>
+                  {elm.link ? (
+                    <a
+                      className={clsx("button", !elm.link && "button-disabled")}
+                      href={elm.link || "#"}
+                      target="_blank"
+                      rel="noreferrer">
+                      {"Website"}
+                    </a>
+                  ) : (
+                    <button className={"button button-disabled"}>
+                      {"Website Coming Soon!"}
+                    </button>
+                  )}
                 </div>
                 <div className="project-img">
-                  <img src={avatarImg} alt="" />
+                  <img
+                    src={elm.img}
+                    alt=""
+                    className={clsx(!elm.link && "img-blur img-object-fit")}
+                  />
                 </div>
               </div>
             </div>
@@ -41,15 +53,28 @@ const SeeWorks: React.FunctionComponent<ISeeWorksProps> = () => {
             key={elm.id}>
             <div className="card-content">
               <span className="work-title">{elm.title}</span>
-              <span className="work-content">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum,
-                perspiciatis blanditiis accusamus commodi consectetur id tempora
-                rem iure eligendi quos eos et autem ratione exercitationem earum
-                laborum ad a sequi!
-              </span>
+              <span className="work-role-content">{elm.role}</span>
+              <span className="work-content">{elm.workDesctiprion}</span>
+              {elm.link ? (
+                <a
+                  className={clsx("button", !elm.link && "button-disabled")}
+                  href={elm.link || "#"}
+                  target="_blank"
+                  rel="noreferrer">
+                  {"Website"}
+                </a>
+              ) : (
+                <button className={"button button-disabled"}>
+                  {"Website Coming Soon!"}
+                </button>
+              )}
             </div>
-            <div className="project-img">
-              <img src={avatarImg} alt="" />
+            <div className={"project-img"}>
+              <img
+                src={elm.img}
+                alt=""
+                className={clsx(!elm.link && "img-blur img-object-fit")}
+              />
             </div>
           </div>
         );

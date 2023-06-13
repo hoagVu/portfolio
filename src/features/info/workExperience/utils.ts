@@ -43,6 +43,9 @@ export const technilcaList = [
   },
   {
     id: 4,
-    skill: "UX Research & UI Design.",
+    skill: "Experienced in debugging, fixing issues and developing software.",
+  }, {
+    id: 6,
+    skill: "Experienced implement responsive web app support for all devices, web accessibility.",
   },
 ];
