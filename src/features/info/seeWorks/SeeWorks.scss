@@ -95,7 +95,7 @@
     }
 
     .img-object-fit {
-      object-fit: contain;
+      object-fit: unset;
     }
 
     img {
@@ -120,6 +120,9 @@
   }
   .card {
     .project-img {
+      .img-object-fit {
+        object-fit: unset;
+      }
       img {
         min-height: 550px;
       }
@@ -168,6 +171,10 @@
       justify-content: center;
       align-items: center;
       display: flex;
+
+      .img-object-fit {
+        object-fit: contain;
+      }
 
       .project-img-link {
         max-height: 100% !important;
