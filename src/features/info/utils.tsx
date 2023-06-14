@@ -1,5 +1,6 @@
 import comingsoonImg from "/src/assets/images/coming-soon.jpg";
 import mytourImg from "/src/assets/images/mytour.png";
+import hmsImg from "/src/assets/images/hms.png";
 
 export const infoList = [
   {
@@ -16,7 +17,8 @@ export const infoList = [
     companyName: "VNTravel",
     title: "Hotel Management Service (HMS)",
     role: "FRONTEND DEV",
-    img: comingsoonImg,
+    img: hmsImg,
+    link: "https://hms.mytour.vn/",
     workDesctiprion:
       "A internal control system that helps manage the supply of accommodation from all other systems of the company, thereby helping businesses optimize revenue in the accommodation segment.",
   },
