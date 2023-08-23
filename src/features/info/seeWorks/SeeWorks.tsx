@@ -1,4 +1,5 @@
 import { infoList } from "@/features/info/utils";
+import { useDevice } from "@/hooks/useDevice";
 import clsx from "clsx";
 import * as React from "react";
 import "./SeeWorks.scss";
@@ -6,6 +7,10 @@ import "./SeeWorks.scss";
 interface ISeeWorksProps {}
 
 const SeeWorks: React.FunctionComponent<ISeeWorksProps> = () => {
+  const { isPC } = useDevice();
+
+  console.log("isPC", isPC);
+
   return (
     <>
       {infoList.map((elm, idx) => {
@@ -34,7 +39,7 @@ const SeeWorks: React.FunctionComponent<ISeeWorksProps> = () => {
                 </div>
                 <div className="project-img">
                   <img
-                    src={elm.img}
+                    src={isPC ? elm.img : elm.imgSP}
                     alt=""
                     className={clsx(!elm.link && "img-blur img-object-fit")}
                   />
@@ -72,7 +77,7 @@ const SeeWorks: React.FunctionComponent<ISeeWorksProps> = () => {
             <div
               className={clsx("project-img", elm.link && "project-img-link")}>
               <img
-                src={elm.img}
+                src={isPC ? elm.img : elm.imgSP}
                 alt=""
                 className={clsx(!elm.link && "img-blur img-object-fit")}
               />

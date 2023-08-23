@@ -20,6 +20,7 @@
     "react-redux": "^8.0.7",
     "sass": "^1.62.1",
     "typewriter-effect": "^2.20.1",
+    "ua-parser-js": "^1.0.35",
     "vite-plugin-eslint": "^1.8.1",
     "vite-tsconfig-paths": "^4.2.0"
   },
