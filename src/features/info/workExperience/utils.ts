@@ -1,17 +1,35 @@
+export const getTimeExp = () => {
+  const startDate = new Date("2023-09-01");
+  const currentDate = new Date();
+  const monthsDiff =
+    (currentDate.getFullYear() - startDate.getFullYear()) * 12 +
+    currentDate.getMonth() -
+    startDate.getMonth();
+  console.log("monthsDiff", monthsDiff);
+  return Math.floor(monthsDiff / 12)
+    ? `${Math.floor(monthsDiff / 12)} yrs ${monthsDiff % 12} mos`
+    : `${monthsDiff} mos`;
+};
+
 export const workList = [
   {
     id: 1,
-    companyName: "FPT Software",
-    timeServing: "Dec 2022 - Now",
-    workingDuration:
-      new Date().getMonth() <= 11
-        ? `${new Date().getMonth() + 1} mos`
-        : `1 yrs ${new Date().getMonth() + 1} mos`,
+    companyName: "One Mount Real Estate",
+    timeServing: "Sep 2023 - Now",
+    workingDuration: getTimeExp(),
     companyAddress: "Thach That, Hanoi, Vietnam · On-site",
     role: "Front-End Web Developer · Full-time",
   },
   {
     id: 2,
+    companyName: "FPT Software",
+    timeServing: "Dec 2022 - Sep 2023",
+    workingDuration: "10 mos",
+    companyAddress: "Thach That, Hanoi, Vietnam · On-site",
+    role: "Front-End Web Developer · Full-time",
+  },
+  {
+    id: 3,
     companyName: "VNTravel",
     timeServing: "Jul 2020 - Dec 2022",
     companyAddress: "36 Hoang Cau, Dong Da, Ha Noi · On-site",
@@ -51,10 +69,12 @@ export const technilcaList = [
   },
   {
     id: 6,
-    skill: "Experienced implement responsive web app support for all devices, web accessibility.",
+    skill:
+      "Experienced implement responsive web app support for all devices, web accessibility.",
   },
   {
     id: 7,
-    skill: "Skilled in leading teams, overseeing tasks and resolving issues, collaborating with cross-functional teams including QA, PM, and UI/UX, and adept at negotiating to align with customer requirements and define project concepts."
-  }
+    skill:
+      "Skilled in leading teams, overseeing tasks and resolving issues, collaborating with cross-functional teams including QA, PM, and UI/UX, and adept at negotiating to align with customer requirements and define project concepts.",
+  },
 ];

@@ -28,7 +28,8 @@ const SeeWorks: React.FunctionComponent<ISeeWorksProps> = () => {
                       className={clsx("button", !elm.link && "button-disabled")}
                       href={elm.link || "#"}
                       target="_blank"
-                      rel="noreferrer">
+                      rel="noreferrer"
+                    >
                       {"Website"}
                     </a>
                   ) : (
@@ -55,7 +56,8 @@ const SeeWorks: React.FunctionComponent<ISeeWorksProps> = () => {
               idx === infoList.length - 1 && "card-display"
             )}
             style={{ top: idx * 20 + 175 }}
-            key={elm.id}>
+            key={elm.id}
+          >
             <div className="card-content">
               <span className="work-title">{elm.title}</span>
               <span className="work-role-content">{elm.role}</span>
@@ -65,7 +67,8 @@ const SeeWorks: React.FunctionComponent<ISeeWorksProps> = () => {
                   className={clsx("button", !elm.link && "button-disabled")}
                   href={elm.link || "#"}
                   target="_blank"
-                  rel="noreferrer">
+                  rel="noreferrer"
+                >
                   {"Website"}
                 </a>
               ) : (
@@ -75,7 +78,8 @@ const SeeWorks: React.FunctionComponent<ISeeWorksProps> = () => {
               )}
             </div>
             <div
-              className={clsx("project-img", elm.link && "project-img-link")}>
+              className={clsx("project-img", elm.link && "project-img-link")}
+            >
               <img
                 src={isPC ? elm.img : elm.imgSP}
                 alt=""
