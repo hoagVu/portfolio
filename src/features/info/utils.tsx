@@ -16,7 +16,7 @@ export const infoList = [
   },
   {
     id: 2,
-    companyName: "VNTravel",
+    companyName: "VNLife",
     title: "Hotel Management Service (HMS)",
     role: "FRONTEND DEV",
     img: hmsImg,
@@ -27,7 +27,7 @@ export const infoList = [
   },
   {
     id: 3,
-    companyName: "VNTravel",
+    companyName: "VNLife",
     title: "Chat Portal",
     role: "FRONTEND DEV",
     img: comingsoonImg,
@@ -37,7 +37,7 @@ export const infoList = [
   },
   {
     id: 4,
-    companyName: "VNTravel",
+    companyName: "VNLife",
     title: "API Management Service (AMS)",
     role: "FRONTEND DEV",
     img: comingsoonImg,
@@ -47,7 +47,7 @@ export const infoList = [
   },
   {
     id: 5,
-    companyName: "VNTravel",
+    companyName: "VNLife",
     role: "FRONTEND DEV",
     title: "Mytour.vn",
     workDesctiprion:
