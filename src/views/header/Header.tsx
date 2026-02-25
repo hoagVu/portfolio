@@ -2,7 +2,7 @@ import * as React from "react";
 import "./Header.scss";
 import CatAnimation from "@/components/catAnimation/CatAnimation";
 import useDarkMode from "@/hooks/useDarkMode";
-import ExamplePdf from "@/assets/files/cv.pdf";
+import ExamplePdf from "@/assets/files/CV_Vu Viet Hoang_FE_Developer.pdf";
 import { DownloadIcon, LinkedinIcon } from "lucide-animated";
 import logoIcon from "/src/assets/images/image.png";
 
@@ -93,7 +93,7 @@ const Header: React.FunctionComponent<IHeaderProps> = () => {
     const a = document.createElement("a");
     a.href = filePath;
     a.download = filePath.substr(filePath.lastIndexOf("/") + 1);
-    a.setAttribute("download", `CV-Vu-Viet-Hoang.pdf`);
+    a.setAttribute("download", `CV_Vu_Viet_Hoang_FE_Developer.pdf`);
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
