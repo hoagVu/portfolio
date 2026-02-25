@@ -6,47 +6,28 @@ import hmsImgSp from "/src/assets/images/hmsSP.png";
 export const infoList = [
   {
     id: 1,
-    companyName: "FPT Software",
-    title: "Customer Relationship Management rebuild (CRM)",
-    role: "TEAM LEAD · FRONTEND DEV",
+    companyName: "One Mount",
+    title: "OneHousing",
+    role: "FRONTEND DEV",
     img: comingsoonImg,
     imgSP: comingsoonImg,
+    link: "https://onehousing.vn/",
     workDesctiprion:
-      "A internal control system which helps businesses store, analyze and report all customer information, interaction history, transaction history, access history to help businesses fully connect with customers, standardize all business processes, increase work efficiency and improve revenue.",
+      "Built and optimized key user-facing flows for OneHousing's real estate platform, focusing on performance, responsive UI, and scalable frontend architecture for high-traffic property experiences.",
   },
   {
     id: 2,
-    companyName: "VNLife",
-    title: "Hotel Management Service (HMS)",
+    companyName: "One Mount",
+    title: "OneHousing Maps",
     role: "FRONTEND DEV",
     img: hmsImg,
     imgSP: hmsImgSp,
-    link: "https://hms.mytour.vn/",
+    link: "https://maps.onehousing.vn/quy-hoach",
     workDesctiprion:
-      "A internal control system that helps manage the supply of accommodation from all other systems of the company, thereby helping businesses optimize revenue in the accommodation segment.",
+      "Developed map-based planning features with interactive layers and location data visualization, improving discoverability and decision-making for real estate planning use cases.",
   },
   {
     id: 3,
-    companyName: "VNLife",
-    title: "Chat Portal",
-    role: "FRONTEND DEV",
-    img: comingsoonImg,
-    imgSP: comingsoonImg,
-    workDesctiprion:
-      "A internal control system which helps to manage chat operations, handle incoming tickets from many different systems of the business, help users to deal directly with customers, thereby helping to optimize work efficiency for customer support teams.",
-  },
-  {
-    id: 4,
-    companyName: "VNLife",
-    title: "API Management Service (AMS)",
-    role: "FRONTEND DEV",
-    img: comingsoonImg,
-    imgSP: comingsoonImg,
-    workDesctiprion:
-      "A internal control system which serves as a gateway, checks the authentication and authorization of the users from other corporate applications.",
-  },
-  {
-    id: 5,
     companyName: "VNLife",
     role: "FRONTEND DEV",
     title: "Mytour.vn",
@@ -55,5 +36,26 @@ export const infoList = [
     img: mytourImg,
     imgSP: mytourImgSp,
     link: "https://mytour.vn/",
+  },
+  {
+    id: 4,
+    companyName: "VNLife",
+    title: "Hotel Management Service (HMS)",
+    role: "FRONTEND DEV",
+    img: comingsoonImg,
+    imgSP: comingsoonImg,
+    link: "https://hms.mytour.vn/",
+    workDesctiprion:
+      "A internal control system that helps manage the supply of accommodation from all other systems of the company, thereby helping businesses optimize revenue in the accommodation segment.",
+  },
+  {
+    id: 5,
+    companyName: "VNLife",
+    title: "Chat Portal",
+    role: "FRONTEND DEV",
+    img: comingsoonImg,
+    imgSP: comingsoonImg,
+    workDesctiprion:
+      "A internal control system which helps to manage chat operations, handle incoming tickets from many different systems of the business, help users to deal directly with customers, thereby helping to optimize work efficiency for customer support teams.",
   },
 ];

@@ -1,8 +1,67 @@
 import * as React from "react";
 import "./Description.scss";
 import Typewriter from "typewriter-effect";
-import avatarImg from "/src/assets/images/avatar.jpeg";
+import {
+  BrainIcon,
+  FolderCodeIcon,
+  LaptopMinimalCheckIcon,
+  SparklesIcon,
+} from "lucide-animated";
+import avatarImg from "/src/assets/images/avatar.png";
 interface IDescriptionProps {}
+
+type TAnimatedIconHandle = {
+  startAnimation: () => void;
+  stopAnimation: () => void;
+};
+
+interface IAutoAnimatedIconProps {
+  Icon: React.ForwardRefExoticComponent<any>;
+  className: string;
+  size: number;
+}
+
+const AutoAnimatedIcon: React.FunctionComponent<IAutoAnimatedIconProps> = ({
+  Icon,
+  className,
+  size,
+}) => {
+  const iconRef = React.useRef<TAnimatedIconHandle | null>(null);
+
+  React.useEffect(() => {
+    iconRef.current?.startAnimation();
+
+    const interval = window.setInterval(() => {
+      iconRef.current?.startAnimation();
+    }, 2200);
+
+    return () => {
+      window.clearInterval(interval);
+      iconRef.current?.stopAnimation();
+    };
+  }, []);
+
+  return <Icon ref={iconRef} className={className} size={size} />;
+};
+
+const heroHighlights = [
+  {
+    label: "Performance-first UI",
+    icon: SparklesIcon,
+  },
+  {
+    label: "Clean Architecture",
+    icon: FolderCodeIcon,
+  },
+  {
+    label: "Responsive by default",
+    icon: LaptopMinimalCheckIcon,
+  },
+  {
+    label: "Product mindset",
+    icon: BrainIcon,
+  },
+];
 
 const Description: React.FunctionComponent<IDescriptionProps> = () => {
   return (
@@ -12,29 +71,28 @@ const Description: React.FunctionComponent<IDescriptionProps> = () => {
           <Typewriter
             onInit={(typewriter) => {
               typewriter
-                .typeString("G'day, ")
-                .pauseFor(500)
-                .typeString("I'm Hoang.<br/>")
-                .pauseFor(100)
-                .typeString("I'm a Vietnamese web developer.")
+                .typeString("Fast by design. Smooth by default.")
                 .start();
             }}
           />
         </span>
-        <span className="label">
-          In addition to my technical skills, I value the importance of
-          creativity and attention to detail in my work as a web developer. I
-          strive to bring a unique and visually appealing touch to every project
-          I undertake, ensuring that the websites I create leave a lasting
-          impression on users.
+        <span className="hero-summary">
+          <span>I’m Hoang — a developer building clean, efficient, and user-centric web systems.</span>
         </span>
-        <span>
-          I am experienced in implementing responsive design principles,
-          ensuring that websites function seamlessly across various devices and
-          screen sizes. With a focus on clean and efficient code, I prioritize
-          performance optimization to deliver fast-loading and smooth user
-          experiences.
-        </span>
+        <div className="hero-highlights">
+          {heroHighlights.map((item) => {
+            return (
+              <span className="hero-pill" key={item.label}>
+                <AutoAnimatedIcon
+                  Icon={item.icon}
+                  className="hero-pill-icon"
+                  size={16}
+                />
+                <span>{item.label}</span>
+              </span>
+            );
+          })}
+        </div>
       </span>
       <div className="avatar">
         <img src={avatarImg} alt="" />

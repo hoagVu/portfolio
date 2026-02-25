@@ -17,24 +17,21 @@ export const workList = [
     companyName: "One Mount Real Estate",
     timeServing: "Sep 2023 - Now",
     workingDuration: getTimeExp(),
-    companyAddress: "Thach That, Hanoi, Vietnam · On-site",
-    role: "Front-End Web Developer · Full-time",
+    role: "Senior Front-End Developer",
   },
   {
     id: 2,
     companyName: "FPT Software",
     timeServing: "Dec 2022 - Sep 2023",
     workingDuration: "10 mos",
-    companyAddress: "Thach That, Hanoi, Vietnam · On-site",
-    role: "Front-End Web Developer · Full-time",
+    role: "Senior Front-End Developer",
   },
   {
     id: 3,
     companyName: "VNTravel",
     timeServing: "Jul 2020 - Dec 2022",
-    companyAddress: "36 Hoang Cau, Dong Da, Ha Noi · On-site",
     workingDuration: "2 yrs 6 mos",
-    role: "Front-End Web Developer · Full-time",
+    role: "Front-End Developer",
   },
 ];
 
@@ -46,35 +43,33 @@ export const educationInfo = {
 };
 
 export const technilcaList = [
+  { id: 1, label: "HTML5", iconKey: "html" },
+  { id: 2, label: "CSS3", iconKey: "css" },
+  { id: 3, label: "Tailwind CSS", iconKey: "tailwind" },
+  { id: 4, label: "JavaScript", iconKey: "js" },
+  { id: 5, label: "TypeScript", iconKey: "ts" },
+  { id: 6, label: "React", iconKey: "react" },
+  { id: 7, label: "Next.js", iconKey: "nextjs" },
+  { id: 8, label: "Angular", iconKey: "angular" },
+  { id: 9, label: "Node.js", iconKey: "nodejs" },
+  { id: 10, label: "Vite", iconKey: "vite" },
+  { id: 11, label: "Webpack", iconKey: "webpack" },
+  { id: 12, label: "Babel", iconKey: "babel" },
   {
-    id: 1,
-    skill: "Languages: JavaScript, TypeScript, HTML5, CSS3.",
+    id: 13,
+    label: "Storybook",
+    iconKey: "storybook",
+    customIconUrl: "https://cdn.simpleicons.org/storybook/FF4785",
   },
   {
-    id: 2,
-    skill:
-      "Frameworks/ Libraries/ Platforms: ReactJS, Angular, NextJS, NodeJS, Webpack, Vite, Babel.",
+    id: 14,
+    label: "Turbopack",
+    iconKey: "turbo",
+    customIconUrl: "https://cdn.simpleicons.org/turborepo/EF4444",
   },
-  {
-    id: 3,
-    skill: "Version Control: SVN, Git, Gitlab, Bitbucket.",
-  },
-  {
-    id: 4,
-    skill: "UX Research & UI Design.",
-  },
-  {
-    id: 5,
-    skill: "Experienced in debugging, fixing issues and developing software.",
-  },
-  {
-    id: 6,
-    skill:
-      "Experienced implement responsive web app support for all devices, web accessibility.",
-  },
-  {
-    id: 7,
-    skill:
-      "Skilled in leading teams, overseeing tasks and resolving issues, collaborating with cross-functional teams including QA, PM, and UI/UX, and adept at negotiating to align with customer requirements and define project concepts.",
-  },
+  { id: 15, label: "Git", iconKey: "git" },
+  { id: 16, label: "GitHub", iconKey: "github" },
+  { id: 17, label: "GitLab", iconKey: "gitlab" },
+  { id: 18, label: "Bitbucket", iconKey: "bitbucket" },
+  { id: 19, label: "UX/UI", iconKey: "figma" },
 ];

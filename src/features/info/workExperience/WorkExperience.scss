@@ -1,11 +1,29 @@
 .work-experience-container {
     width: 100%;
 
+    .info-section-anchor {
+        scroll-margin-top: calc(var(--header-height) + 14px);
+    }
+
     .title {
-        font-size: var(--font-size-1);
+        display: flex;
+        align-items: center;
+        gap: 0.25em;
+        font-size: var(--font-size-2);
         font-weight: bold;
         margin-bottom: 0.5em;
         margin-top: var(--component-padding-top);
+
+        .title-icon {
+            width: 1em;
+            height: 1em;
+            color: var(--text-primary);
+            flex-shrink: 0;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 0;
+        }
     }
 }
 
@@ -39,6 +57,56 @@
 
 }
 
+.about-me-card {
+    .card-label {
+        width: 100%;
+
+        .about-me-content {
+            p {
+                color: var(--textNormal);
+            }
+        }
+    }
+}
+
+.technical-skill-card {
+    .technical-skill-grid {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 0.75em;
+    }
+
+    .technical-skill-item {
+        border: 0.5px solid var(--textNormal);
+        border-radius: 10px;
+        padding: 0.6em 0.7em;
+        display: flex;
+        align-items: center;
+        gap: 0.45em;
+        min-height: 42px;
+    }
+
+    .technical-skill-logo {
+        width: 28px;
+        height: 28px;
+        min-width: 28px;
+        object-fit: contain;
+        border-radius: 6px;
+        transform-origin: center;
+        animation: skillLogoFloat 2.8s ease-in-out infinite;
+    }
+
+    .technical-skill-label {
+        font-size: var(--font-size-5);
+        color: var(--text-primary);
+        line-height: 1;
+        display: inline-flex;
+        align-items: center;
+        min-height: 20px;
+    }
+}
+
 
 @media only screen and (min-width: 768px) and (max-width: 1490px) {
 
@@ -63,6 +131,12 @@
 
     }
 
+    .technical-skill-card {
+        .technical-skill-grid {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+    }
+
 }
 
 @media only screen and (min-width: 375px) and (max-width: 768px) {
@@ -83,9 +157,44 @@
             }
 
             .card-sub-title {
-                font-size: var(--font-size-6);
+                font-size: var(--font-size-5);
             }
         }
     }
 
+    .technical-skill-card {
+        .technical-skill-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 0.6em;
+        }
+
+        .technical-skill-item {
+            padding: 0.55em 0.6em;
+            min-height: 38px;
+        }
+
+        .technical-skill-label {
+            font-size: var(--font-size-5);
+        }
+    }
+
+}
+
+@keyframes skillLogoFloat {
+    0%,
+    100% {
+        transform: translateY(0) scale(1);
+    }
+
+    50% {
+        transform: translateY(-2px) scale(1.04);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .technical-skill-card {
+        .technical-skill-logo {
+            animation: none;
+        }
+    }
 }
