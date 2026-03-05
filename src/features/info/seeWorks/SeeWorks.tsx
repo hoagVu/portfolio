@@ -34,9 +34,9 @@ type TAnimatedIconHandle = {
 };
 
 type TAnimatedIconComponent = React.ForwardRefExoticComponent<
-  React.HTMLAttributes<HTMLDivElement> &
-    { size?: number } &
-    React.RefAttributes<TAnimatedIconHandle>
+  React.HTMLAttributes<HTMLDivElement> & {
+    size?: number;
+  } & React.RefAttributes<TAnimatedIconHandle>
 >;
 
 interface IAutoAnimatedIconProps {
@@ -123,26 +123,35 @@ const SeeWorkCard: React.FunctionComponent<ISeeWorkCardProps> = ({
 }) => {
   const cardScale = useTransform(progress, range, [1, targetScale]);
   const isHmsProject = elm.title === "Hotel Management Service (HMS)";
+  const isHoagUiProject = elm.title === "@hoag/ui";
   const canShowIframe = Boolean(elm.link) && !isHmsProject;
-  const shouldRenderComingSoonPlaceholder = !canShowIframe && elm.img === elm.imgSP;
+  const shouldRenderComingSoonPlaceholder =
+    !canShowIframe && elm.img === elm.imgSP;
   const ProjectIcon = getProjectIcon(elm.title);
   const websiteIconRef = React.useRef<TAnimatedIconHandle | null>(null);
   const comingSoonIconRef = React.useRef<TAnimatedIconHandle | null>(null);
+  const getStartedIconRef = React.useRef<TAnimatedIconHandle | null>(null);
+  const viewComponentsIconRef = React.useRef<TAnimatedIconHandle | null>(null);
 
-  const triggerIconAnimation = (iconRef: React.RefObject<TAnimatedIconHandle | null>) => {
+  const triggerIconAnimation = (
+    iconRef: React.RefObject<TAnimatedIconHandle | null>,
+  ) => {
     iconRef.current?.startAnimation();
   };
 
   return (
     <div className="card-container">
       <motion.div
-        className="card"
+        className={clsx("card", isHoagUiProject && "card-hoag-ui")}
         style={{
           top: isPC ? `${idx * 24}px` : 0,
           scale: isPC ? cardScale : 1,
         }}
       >
         <div className="card-content">
+          {isHoagUiProject && (
+            <span className="work-badge">Personal Project</span>
+          )}
           {elm.link ? (
             <a
               className="work-title work-title-link"
@@ -170,10 +179,60 @@ const SeeWorkCard: React.FunctionComponent<ISeeWorkCardProps> = ({
             </span>
           )}
           <span className="work-role-content">{elm.role}</span>
+          {isHoagUiProject && (
+            <span className="work-subtitle">
+              Build consistent, accessible interfaces faster
+            </span>
+          )}
           <span className="work-content">{elm.workDesctiprion}</span>
-          {elm.link ? (
+          {isHoagUiProject ? (
+            <div className="hoag-cta-group">
+              <a
+                className="button button-cta-primary"
+                href="https://ui.hoagvu.dev/overview"
+                target="_blank"
+                rel="noreferrer"
+                onFocus={() => triggerIconAnimation(getStartedIconRef)}
+                onMouseEnter={() => triggerIconAnimation(getStartedIconRef)}
+              >
+                <span className="button-content">
+                  <AutoAnimatedIcon
+                    Icon={SparklesIcon}
+                    className="button-icon"
+                    size={16}
+                    delayMs={220 + idx * 120}
+                    controlRef={getStartedIconRef}
+                  />
+                  <span>Get Started</span>
+                </span>
+              </a>
+              <a
+                className="button button-cta-secondary"
+                href="https://ui.hoagvu.dev/components/button"
+                target="_blank"
+                rel="noreferrer"
+                onFocus={() => triggerIconAnimation(viewComponentsIconRef)}
+                onMouseEnter={() => triggerIconAnimation(viewComponentsIconRef)}
+              >
+                <span className="button-content">
+                  <AutoAnimatedIcon
+                    Icon={LinkIcon}
+                    className="button-icon"
+                    size={16}
+                    delayMs={260 + idx * 120}
+                    controlRef={viewComponentsIconRef}
+                  />
+                  <span>View Components</span>
+                </span>
+              </a>
+            </div>
+          ) : elm.link ? (
             <a
-              className={clsx("button", !elm.link && "button-disabled")}
+              className={clsx(
+                "button",
+                "button-cta-secondary",
+                !elm.link && "button-disabled",
+              )}
               href={elm.link || "#"}
               target="_blank"
               rel="noreferrer"
@@ -188,12 +247,12 @@ const SeeWorkCard: React.FunctionComponent<ISeeWorkCardProps> = ({
                   delayMs={200 + idx * 120}
                   controlRef={websiteIconRef}
                 />
-                <span>Website</span>
+                <span>Open Website</span>
               </span>
             </a>
           ) : (
             <button
-              className={"button button-disabled"}
+              className={"button button-cta-secondary button-disabled"}
               onFocus={() => triggerIconAnimation(comingSoonIconRef)}
               onMouseEnter={() => triggerIconAnimation(comingSoonIconRef)}
             >
@@ -205,15 +264,23 @@ const SeeWorkCard: React.FunctionComponent<ISeeWorkCardProps> = ({
                   delayMs={240 + idx * 120}
                   controlRef={comingSoonIconRef}
                 />
-                <span>Website Coming Soon!</span>
+                <span>Coming Soon</span>
               </span>
             </button>
           )}
         </div>
-        <div className={clsx("project-img", elm.link && "project-img-link")}>
+        <div
+          className={clsx(
+            "project-img",
+            elm.link && "project-img-link",
+            isHoagUiProject && "project-img-hoag-ui",
+          )}
+        >
           {canShowIframe ? (
             <div className="website-preview">
-              <div className="website-toolbar">Live preview</div>
+              <div className="website-toolbar">
+                {isHoagUiProject ? "Live preview • @hoag/ui" : "Live preview"}
+              </div>
               <div className="project-img-inner">
                 <iframe
                   title={`${elm.title} preview`}
@@ -229,7 +296,9 @@ const SeeWorkCard: React.FunctionComponent<ISeeWorkCardProps> = ({
                   rel="noreferrer"
                   aria-label={`Open ${elm.title} website`}
                 >
-                  <span className="overlay-link-text">Open {elm.title} website</span>
+                  <span className="overlay-link-text">
+                    Open {elm.title} website
+                  </span>
                 </a>
               </div>
             </div>
@@ -237,11 +306,14 @@ const SeeWorkCard: React.FunctionComponent<ISeeWorkCardProps> = ({
             <div
               className={clsx(
                 "project-img-inner",
-                shouldRenderComingSoonPlaceholder && "coming-soon-placeholder"
+                shouldRenderComingSoonPlaceholder && "coming-soon-placeholder",
               )}
             >
               {shouldRenderComingSoonPlaceholder ? (
-                <div className="coming-soon-content" aria-label="Coming soon preview">
+                <div
+                  className="coming-soon-content"
+                  aria-label="Coming soon preview"
+                >
                   <span className="coming-soon-text">Coming Soon</span>
                   <span className="coming-soon-subtext">Launching shortly</span>
                 </div>
@@ -303,8 +375,12 @@ const SeeWorks: React.FunctionComponent<ISeeWorksProps> = () => {
       }}
     >
       <div ref={titleRef} className="see-works-title">
-        <AutoAnimatedIcon Icon={SparklesIcon} className="section-icon" size={26} />
-        <span>See Works</span>
+        <AutoAnimatedIcon
+          Icon={SparklesIcon}
+          className="section-icon"
+          size={26}
+        />
+        <span>Selected Works</span>
       </div>
       {infoList.map((elm, idx) => {
         const targetScale = 1 - (infoList.length - idx) * 0.05;
