@@ -132,6 +132,7 @@ const SeeWorkCard: React.FunctionComponent<ISeeWorkCardProps> = ({
   const comingSoonIconRef = React.useRef<TAnimatedIconHandle | null>(null);
   const getStartedIconRef = React.useRef<TAnimatedIconHandle | null>(null);
   const viewComponentsIconRef = React.useRef<TAnimatedIconHandle | null>(null);
+  const storybookIconRef = React.useRef<TAnimatedIconHandle | null>(null);
 
   const triggerIconAnimation = (
     iconRef: React.RefObject<TAnimatedIconHandle | null>,
@@ -225,6 +226,27 @@ const SeeWorkCard: React.FunctionComponent<ISeeWorkCardProps> = ({
                   <span>View Components</span>
                 </span>
               </a>
+              {"storybookLink" in elm && elm.storybookLink && (
+                <a
+                  className="button button-cta-secondary"
+                  href={elm.storybookLink}
+                  target="_blank"
+                  rel="noreferrer"
+                  onFocus={() => triggerIconAnimation(storybookIconRef)}
+                  onMouseEnter={() => triggerIconAnimation(storybookIconRef)}
+                >
+                  <span className="button-content">
+                    <AutoAnimatedIcon
+                      Icon={LinkIcon}
+                      className="button-icon"
+                      size={16}
+                      delayMs={300 + idx * 120}
+                      controlRef={storybookIconRef}
+                    />
+                    <span>Open Storybook</span>
+                  </span>
+                </a>
+              )}
             </div>
           ) : elm.link ? (
             <a

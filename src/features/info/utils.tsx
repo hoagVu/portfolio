@@ -12,6 +12,7 @@ export const infoList = [
     img: comingsoonImg,
     imgSP: comingsoonImg,
     link: "https://ui.hoagvu.dev/",
+    storybookLink: "https://story.hoagvu.dev/?path=/docs/ui-accordion--docs",
     workDesctiprion:
       "A self-developed React UI system built with Radix primitives and Tailwind-first patterns, focused on reusable and accessible components for dashboards, admin tools, and product teams.",
   },
