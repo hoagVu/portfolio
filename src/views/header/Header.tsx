@@ -24,7 +24,9 @@ const Header: React.FunctionComponent<IHeaderProps> = () => {
   const { isDarkMode } = useDarkMode();
   const cvIconRef = React.useRef<TAnimatedIconHandle | null>(null);
   const linkedinIconRef = React.useRef<TAnimatedIconHandle | null>(null);
-  const [activeSectionId, setActiveSectionId] = React.useState(sectionNavItems[0].id);
+  const [activeSectionId, setActiveSectionId] = React.useState(
+    sectionNavItems[0].id,
+  );
 
   React.useEffect(() => {
     const sections = sectionNavItems
@@ -84,7 +86,9 @@ const Header: React.FunctionComponent<IHeaderProps> = () => {
     };
   }, []);
 
-  const triggerIconAnimation = (iconRef: React.RefObject<TAnimatedIconHandle | null>) => {
+  const triggerIconAnimation = (
+    iconRef: React.RefObject<TAnimatedIconHandle | null>,
+  ) => {
     iconRef.current?.startAnimation();
   };
 
@@ -121,7 +125,10 @@ const Header: React.FunctionComponent<IHeaderProps> = () => {
           {isDarkMode ? (
             <CatAnimation />
           ) : (
-            <button className="brand-button" onClick={() => window.scrollTo(0, 0)}>
+            <button
+              className="brand-button"
+              onClick={() => window.scrollTo(0, 0)}
+            >
               <img src={logoIcon} alt="" width={80} />
             </button>
           )}
@@ -149,7 +156,11 @@ const Header: React.FunctionComponent<IHeaderProps> = () => {
             onFocus={() => triggerIconAnimation(cvIconRef)}
             onMouseEnter={() => triggerIconAnimation(cvIconRef)}
           >
-            <DownloadIcon ref={cvIconRef} className="nav-button-icon" size={16} />
+            <DownloadIcon
+              ref={cvIconRef}
+              className="nav-button-icon"
+              size={16}
+            />
             <span>myCV</span>
           </button>
           <button
@@ -158,10 +169,11 @@ const Header: React.FunctionComponent<IHeaderProps> = () => {
             onMouseEnter={() => triggerIconAnimation(linkedinIconRef)}
             onClick={() => {
               window.open(
-                "https://www.linkedin.com/in/hoang-vu-viet-93608114b/",
-                "_blank"
+                "https://www.linkedin.com/in/hoang-vu-93608114b/",
+                "_blank",
               );
-            }}>
+            }}
+          >
             <LinkedinIcon
               ref={linkedinIconRef}
               className="nav-button-icon"
