@@ -7,6 +7,17 @@ export const infoList = [
   {
     id: 0,
     companyName: "Personal Project",
+    title: "Personal Blog",
+    role: "Creator / Frontend Developer",
+    img: comingsoonImg,
+    imgSP: comingsoonImg,
+    link: "https://hoagvu.dev/",
+    workDesctiprion:
+      "A personal blog where I share frontend engineering notes, practical UI patterns, and lessons learned while building real-world products.",
+  },
+  {
+    id: 1,
+    companyName: "Personal Project",
     title: "@hoag/ui",
     role: "Creator / Frontend Developer",
     img: comingsoonImg,
@@ -17,7 +28,7 @@ export const infoList = [
       "A self-developed React UI system built with Radix primitives and Tailwind-first patterns, focused on reusable and accessible components for dashboards, admin tools, and product teams.",
   },
   {
-    id: 1,
+    id: 2,
     companyName: "One Mount",
     title: "OneHousing",
     role: "Frontend Developer",
@@ -28,7 +39,7 @@ export const infoList = [
       "Built and optimized key user-facing flows for OneHousing's real estate platform, with a focus on performance, responsive UI, and scalable frontend architecture for high-traffic experiences.",
   },
   {
-    id: 2,
+    id: 3,
     companyName: "One Mount",
     title: "OneHousing Maps",
     role: "Frontend Developer",
@@ -39,7 +50,7 @@ export const infoList = [
       "Developed map-based planning features with interactive layers and location-data visualization, improving discoverability and decision-making for real estate use cases.",
   },
   {
-    id: 3,
+    id: 4,
     companyName: "VNLife",
     role: "Frontend Developer",
     title: "Mytour.vn",
@@ -50,7 +61,7 @@ export const infoList = [
     link: "https://mytour.vn/",
   },
   {
-    id: 4,
+    id: 5,
     companyName: "VNLife",
     title: "Hotel Management Service (HMS)",
     role: "Frontend Developer",
@@ -61,7 +72,7 @@ export const infoList = [
       "An internal control system that manages accommodation supply across company platforms, helping operations teams optimize inventory and revenue in the hospitality segment.",
   },
   {
-    id: 5,
+    id: 6,
     companyName: "VNLife",
     title: "Chat Portal",
     role: "Frontend Developer",
